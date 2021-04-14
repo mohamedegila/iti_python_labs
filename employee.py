@@ -108,3 +108,31 @@ class Employee(person.Person):
         mailbody = "Body: " + str(body) + "\n"
         f.write(mailbody)
         f.close()
+
+    def sleep(self,hours):
+        if hours == 7:
+            self.sleepmood = "happy"
+        elif hours > 0 and hours < 7:
+            self.sleepmood = "tired"
+        elif hours > 7 and hours <= 24:
+            self.sleepmood = "lazy"
+        else:
+            self.sleepmood = "none"
+
+#Person eat method
+#--------------------
+
+    def eat(self,meals):
+        if meals == 3:
+            self.healthRate = 100
+        elif meals == 2:
+            self.healthRate = 75
+        elif meals == 1:
+            self.healthRate = 50
+
+#Person buy method
+#--------------------
+
+    def buy(self,items):
+        self.money = self.money - (10 * items)
+

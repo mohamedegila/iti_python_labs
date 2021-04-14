@@ -27,10 +27,10 @@ while menu1_option != menu1_option_num:
                 emp.email = input("Enter employee email: ")
                 emp.workmood = input("Enter employee workmood: ")
                 emp.salary = int(input("Enter employee salary: "))
-                check = input("Enter is_manager? mngr or nrml?")
-                if check == "mngr":
+                check = input("Enter is_manager? yes/no ?")
+                if check == "yes" or "y":
                     emp.is_manager =  True
-                if check == "nrml":
+                if check == "no" or 'n':
                     emp.is_manager =  False
                 emp.office_name = input("Enter employee office name: ")
                 office.hire(emp)

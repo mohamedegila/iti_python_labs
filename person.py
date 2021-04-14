@@ -50,31 +50,19 @@ class Person:
 #--------------------
 
     def sleep(self,hours):
-        if hours == 7:
-            self.sleepmood = "happy"
-        elif hours > 0 and hours < 7:
-            self.sleepmood = "tired"
-        elif hours > 7 and hours <= 24:
-            self.sleepmood = "lazy"
-        else:
-            self.sleepmood = "none"
+        pass
 
 #Person eat method
 #--------------------
 
     def eat(self,meals):
-        if meals == 3:
-            self.healthRate = 100
-        elif meals == 2:
-            self.healthRate = 75
-        elif meals == 1:
-            self.healthRate = 50
+        pass
 
 #Person buy method
 #--------------------
 
     def buy(self,items):
-        self.money = self.money - (10 * items)
+        pass
 
 
 

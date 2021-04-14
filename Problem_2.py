@@ -1,5 +1,6 @@
  
 #Problem #2 remove duplicates from given list 
+
 def unique_list(elements):
   '''
   Function to remove duplicates from given list 
