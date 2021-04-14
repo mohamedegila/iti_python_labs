@@ -1,6 +1,10 @@
 
 #problem #6 find the locations that a given character was found in the given string
 def find_char_postion(input_word,input_char):
+    '''
+    Function that find char in word and 
+    return char postions
+    '''
     res = []
     for i in range(0, len(input_word)):
     
