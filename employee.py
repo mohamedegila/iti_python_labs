@@ -108,6 +108,7 @@ class Employee(person.Person):
         f.write(mailsuject)
         mailbody = "Body: " + str(body) + "\n"
         f.write(mailbody)
+        f.write("=======================================")
         f.close()
 
     def sleep(self,hours):

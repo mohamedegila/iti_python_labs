@@ -8,8 +8,8 @@ def menu(options,*args):
 emp = employee.Employee()
 office = office.Office()
  
-menu1_option_num = 3
-menu(menu1_option_num, "Enter as manager: ", "Enter as normal employee:", "Exit")
+menu1_option_num = 2
+menu(menu1_option_num, "Enter Employee: ", "Exit")
 menu1_option = int(input("Enter your option: "))
 
 while menu1_option != menu1_option_num:
@@ -62,22 +62,22 @@ while menu1_option != menu1_option_num:
             menu(menu2_option_num,"Show all employees","Show employee","Hire employee","Fire employee","Back")
             menu2_option = int(input("Enter your option: "))
 
-    elif menu1_option == 2:
-        menu3_option_num = 3
-        menu(menu3_option_num,"Show all employees","Show employee","Back")
-        menu3_option = int(input("Enter your option: "))
-        while menu3_option != menu3_option_num:
-            if menu3_option == 1:
-                office.get_all_employees()
-            elif menu3_option == 2:
-                empId = int(input("Enter employee Id: "))
-                office.get_employee(empId)
-            else:
-                print("Invalid option")
+    # elif menu1_option == 2:
+    #     menu3_option_num = 3
+    #     menu(menu3_option_num,"Show all employees","Show employee","Back")
+    #     menu3_option = int(input("Enter your option: "))
+    #     while menu3_option != menu3_option_num:
+    #         if menu3_option == 1:
+    #             office.get_all_employees()
+    #         elif menu3_option == 2:
+    #             empId = int(input("Enter employee Id: "))
+    #             office.get_employee(empId)
+    #         else:
+    #             print("Invalid option")
 
-            print("\n")
-            menu(menu3_option_num,"Show all employees","Show employee","Back")
-            menu3_option = int(input("Enter your option: "))
+    #         print("\n")
+    #         menu(menu3_option_num,"Show all employees","Show employee","Back")
+    #         menu3_option = int(input("Enter your option: "))
     else:
         print("Invalid option")
 
