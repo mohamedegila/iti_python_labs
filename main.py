@@ -1,5 +1,6 @@
 import employee
 import office
+import dbconnection 
 def menu(options,*args):
     for option in range(0,options):
         print("[" + str(option + 1) + "] " + args[option])
@@ -34,9 +35,24 @@ while menu1_option != menu1_option_num:
                     emp.is_manager =  False
                 emp.office_name = input("Enter employee office name: ")
                 office.hire(emp)
+                emp.sendEmail(emp.email,'hired','you are hired')
                 print("Added employee successfully.")
             elif menu2_option == 4:
+                db = dbconnection.DbConnection()
+                
                 empid = int(input("Enter employee Id: "))
+                
+                
+               
+
+                if db.checkConnection():
+                    db.useDatabase('python_day2')
+                    ename=db.getEmployee(empid)
+                    
+                else:
+                    print("connection failed")
+                db.closeConnection()
+                emp.sendEmail(ename[1][0][1],'fired','sorry')
                 office.fire(empid)
                 print("removed employee successfully.")
             else:

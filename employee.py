@@ -96,14 +96,15 @@ class Employee(person.Person):
 #Employee sendEmail method
 #--------------------------
 
-    def sendEmail(self, to, suject, body):
-        f = open("email.txt","w")
+    def sendEmail(self, to, subject, body):
+        validto=''
+        f = open("email.txt","a")
         regex = '^(\w|\.|\_|\-)+[@](\w|\_|\-|\.)+[.]\w{2,3}$'
         if (re.search(regex, to)):
             validto = to
         mailto = "To: " + str(validto) + "\n"
         f.write(mailto)
-        mailsuject = "Subject: " + str(suject) + "\n"
+        mailsuject = "Subject: " + str(subject) + "\n"
         f.write(mailsuject)
         mailbody = "Body: " + str(body) + "\n"
         f.write(mailbody)

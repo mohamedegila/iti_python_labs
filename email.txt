@@ -1,1 +1,6 @@
-
+To: safy@mail.com
+Subject: hired
+Body: you are hired
+To: eslam@mail.com
+Subject: fired
+Body: sorry
